@@ -1,11 +1,3 @@
 source ~/.term_profile
 
-export EDITOR=vim
-
-source @fzf_src@/shell/key-bindings.bash
-export FZF_TMUX=0
-
-export GOPATH="/home/kamil"
-export PATH="$GOPATH/bin:$PATH"
-
-export JAVA_HOME="@jdk@"
+export EDITOR=emacs
