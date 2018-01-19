@@ -1,4 +1,4 @@
-{stdenv, fzf, jdk}:
+{stdenv}:
 
 stdenv.mkDerivation rec {
   name = "bash-config";
@@ -9,9 +9,6 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     install -dm 755 $out/userHome
-    substitute $src/bashrc $out/userHome/.bashrc
-      --subst-var-by fzf_src ${fzf.src}
-    substituteInPlace $out/userHome/.bashrc \
-      --subst-var-by jdk ${jdk}
+    cp $src/bashrc $out/userHome/.bashrc
   '';
 }
