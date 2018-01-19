@@ -1,5 +1,7 @@
 # .nixpkgs aka dotfiles with nix
 
+Based on https://github.com/kamilchm/.nixpkgs
+
 ## Fully declarative user environment
 
 1. Use [nix](https://nixos.org/nix/) to manage all your user space programs [declaratively](https://github.com/kamilchm/.nixpkgs/blob/5c360c3a05872f5ea15d771d289c812a3dd159b5/config.nix#L35).
