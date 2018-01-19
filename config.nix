@@ -12,6 +12,9 @@
     elixir-config = import ./elixir-config {
       inherit (pkgs) stdenv;
     };
+    xmonad-config = import ./xmonad-config {
+      inherit (pkgs) stdenv;
+    };
 
     all = with pkgs; buildEnv {
       name = "all";
@@ -19,6 +22,7 @@
       paths = [
         bash-config
         elixir-config
+        xmonad-config
 
         nix-repl
         nix-prefetch-scripts
