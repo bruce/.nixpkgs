@@ -8,6 +8,7 @@ stdenv.mkDerivation rec {
   src = ./.;
 
   installPhase = ''
+    echo $USER
     install -dm 755 $out/userHome
     cp -R $src/xmonad $out/userHome/.xmonad
   '';
