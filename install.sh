@@ -12,10 +12,7 @@ set +e
 echo "Adding dotfiles link in user home"
 find .nix-profile/userHome/ -maxdepth 1 | \
     sed "s/.nix-profile\/userHome\///g" | \
-    grep -v "^$" | xargs -I {} ln -sf .nix-profile/userHome/{} {}
-
-
-chown -R $USER .nix-profile/userHome/
+    grep -v "^$" | xargs -I {} rm -f {}
 
 popd > /dev/null
 
