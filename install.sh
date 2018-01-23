@@ -20,7 +20,7 @@ find .nix-profile/userHome/ -maxdepth 1 | \
     grep -v "^$" | xargs -I {} ln -sf .nix-profile/userHome/{} {}
 
 
-chown -R $USER .nix-profile
+chown -R $USER .nix-profile/userHome/
 
 popd > /dev/null
 
